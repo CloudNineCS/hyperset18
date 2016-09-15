@@ -1,0 +1,35 @@
+<div class="container col-md-12" >
+  <div class="MainPanelHeading">
+    <h3 class="" style="text-align: center">Оформить Заказ</h3>
+  </div>
+  <div class="panel-body" style="background: #E74C3C">
+    <%= form_for(@order) do |f| %>
+      <% if @order.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+          <ul>
+          <% @order.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="">
+        <!--<label>Ваше имя:</label>-->
+        <%= f.text_field :name, class: 'form-control' , placeholder: 'Ваше Имя и Фамилия' %>
+      </div><br>
+      <div class="">
+        <!--<label>email:</label>-->
+        <%= f.text_field :email, class: 'form-control' , placeholder: 'Ваш Email'  %>
+      </div><br>
+       <div class="">
+        <!--<label>Номер телефона:</label>-->
+        <%= f.text_field :phone, class: 'form-control' , placeholder: 'Номер телефона: 88005553535' %>
+      </div>
+      <div class="actions">
+        <input type="submit" name="commit" value="Заказать сейчас!" class="my_button" >
+      </div></br>
+    <% end %>
+  </div>
+</div>
