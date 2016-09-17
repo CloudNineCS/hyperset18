@@ -5,11 +5,11 @@
       <h1 style="text-align: center">Заказ отправлен!</h1>
       <p>Спасибо, что оформили заказ! Наш представитель обязательно свяжется с Вами в ближайшее время. <br><br><br> Если у Вас возникли вопросы, то можете позвонить по номеру
       8-800-555-35-35 или написать письмо по адресу support@hyperset.ru</p>
-      <button class="my_button" style="margin-top: 60px"> Вернуться назад </button>
+      <%= link_to 'Вернуться назад', root_path, class: 'btn btn-warning', id: 'button_new_order' %>
     </div>
   </div>
   <div class="col-md-3"></div>
 </div>
 
-<%= link_to 'Назад', edit_order_path(@order) %>
+
 
